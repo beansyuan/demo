@@ -1,0 +1,12 @@
+spring:
+  cloud:
+   gateway:
+    routes:
+    - id: path_route
+      uri: http://www.baidu.com
+      predicates:
+      - Path=/test
+      filters:
+      - StripPrefix=1
+server:
+  port: 8765
